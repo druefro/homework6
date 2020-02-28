@@ -13,10 +13,9 @@ function getVid(){
 	video.load();
 	console.log("Video Loaded");
 	var playButton = document.querySelectorAll(".play"); //https://piazza.com/class/k4x9mhnyxx221k?cid=106
-	playButton[0].innerHTML += '<img src="img/playbutton.png" alt="play button"/>';
+	playButton[0].innerHTML += '<img src="img/playButton.png" alt="play button"/>'
 	var pauseButton = document.querySelectorAll(".pause")
 	pauseButton[0].innerHTML += '<img src="img/pauseButton.png" alt="pause button"/>'
-	console.log(playButton[0]);
 }
 
 function playVid() { 
@@ -34,12 +33,12 @@ function pauseVid() {
 } 
 
 function decreaseSpeed() { 
-	video.playbackRate = video.playbackRate - .2;
+	video.playbackRate = video.playbackRate - (video.playbackRate * .2);
   	console.log("Speed is "+ video.playbackRate);
 } 
 
 function increaseSpeed() {
-	video.playbackRate = video.playbackRate + .25;
+	video.playbackRate = video.playbackRate + (video.playbackRate * .25);
 	console.log("Speed is "+ video.playbackRate);
 } 
 
